@@ -42,15 +42,15 @@ There are also a couple of extra utility functions:
 
 * Retrieve a specific entry *n* from the buffer:
 
-    myValue = myBuffer.getEntry(n);
+    `myValue = myBuffer.getEntry(n);`
 
 * Get the current *head* pointer value:
 
-    uint32_t head = myByffer.getHead();
+    `uint32_t head = myByffer.getHead();`
 
 * Get the current *tail* pointer value:
 
-    uint32_t tail = myBuffer.getTail();
+    `uint32_t tail = myBuffer.getTail();`
 
 The last two don't return content, they just return the position within the
 buffer that the head and tail point to.  You can then use those in conjunction
