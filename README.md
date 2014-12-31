@@ -20,6 +20,16 @@ even do it with floating point values:
 
     CircularBuffer<float> myBuffer(64);
 
+It doesn't even need to be limited to primitive types:
+
+    struct foo {
+        int a;
+        int b;
+        char c;
+    };
+
+    CircularBuffer<struct foo> myBuffer(64);
+
 Adding data to the buffer is as simple as:
 
     myBuffer.write(myValue);
