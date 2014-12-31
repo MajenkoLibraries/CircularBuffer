@@ -13,7 +13,9 @@ functions you're used to with the Stream class.
 To use the class you first must define a buffer, its size, and most importantly, its
 content type:
 
+````C++
     CircularBuffer<int> myBuffer(64);
+````
 
 That, for example, will create a circular buffer consisting of 64 integers.  You can
 even do it with floating point values:
