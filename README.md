@@ -38,7 +38,7 @@ There are also a couple of extra utility functions:
 
 * Purge all the data from the buffer:
 
-    myBuffer.clear();
+    `myBuffer.clear();`
 
 * Retrieve a specific entry *n* from the buffer:
 
