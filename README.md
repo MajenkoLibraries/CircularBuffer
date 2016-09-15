@@ -13,46 +13,34 @@ functions you're used to with the Stream class.
 To use the class you first must define a buffer, its size, and most importantly, its
 content type:
 
-````C++
-CircularBuffer<int> myBuffer(64);
-````
+    CircularBuffer<int> myBuffer(64);
 
 That, for example, will create a circular buffer consisting of 64 integers.  You can
 even do it with floating point values:
 
-````C++
-CircularBuffer<float> myBuffer(64);
-````
+    CircularBuffer<float> myBuffer(64);
 
 It doesn't even need to be limited to primitive types:
 
-````C++
-struct foo {
-    int a;
-    int b;
-    char c;
-};
-
-CircularBuffer<struct foo> myBuffer(64);
-````
+    struct foo {
+        int a;
+        int b;
+        char c;
+    };
+    
+    CircularBuffer<struct foo> myBuffer(64);
 
 Adding data to the buffer is as simple as:
 
-````C++
-myBuffer.write(myValue);
-````
+    myBuffer.write(myValue);
 
 You can see if there is any data available in the buffer with:
 
-````C++
-if (myBuffer.available()) { ... }
-````
+    if (myBuffer.available()) { ... }
 
 And retrieve an item of data from it with:
 
-````C++
-myValue = myBuffer.read();
-````
+    myValue = myBuffer.read();
 
 In all instances *myValue* should be the same type as the content type of the buffer.
 
@@ -60,27 +48,19 @@ There are also a couple of extra utility functions:
 
 * Purge all the data from the buffer:
 
-````C++
-myBuffer.clear();
-````
+    myBuffer.clear();
 
 * Retrieve a specific entry *n* from the buffer:
 
-````C++
-myValue = myBuffer.getEntry(n);
-````
+    myValue = myBuffer.getEntry(n);
 
 * Get the current *head* pointer value:
 
-````C++
-uint32_t head = myByffer.getHead();
-````
+    uint32_t head = myByffer.getHead();
 
 * Get the current *tail* pointer value:
 
-````C++
-uint32_t tail = myBuffer.getTail();
-````
+    uint32_t tail = myBuffer.getTail();
 
 The last two don't return content, they just return the position within the
 buffer that the head and tail point to.  You can then use those in conjunction
