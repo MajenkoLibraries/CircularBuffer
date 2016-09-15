@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/MajenkoLibraries/CircularBuffer"
   },
-  "version": "1.0.14",
+  "version": "1.0.15",
   "frameworks": "arduino",
-  "platforms": "microchippic32"
+  "platforms": "*"
 }
